@@ -1,0 +1,16 @@
+if(!require("pak")) install.packages("pak")
+
+new <- c("gh",
+         "gitcreds",
+         "usethis")
+
+pak::pak(new)
+library(gh)
+library(gitcreds)
+library(usethis)
+usethis::use_git_config(
+  user.name = "Camilo Sepulveda",
+  user.email = "ps.camilosepulveda@gmail.com",
+  github.user = "camilosepulveda123"
+)
+usethis::git_sitrep()
